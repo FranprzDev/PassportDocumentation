@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.subrayarTrue {
+  text-decoration-color: #bef264; /* Cambia el color según tus necesidades */
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+}
+
+.subrayadoTrue:hover {
+  text-decoration-color: transparent;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+  animation: subrayadoAnimacionTrue 1s;
+}
+
+@keyframes subrayadoAnimacionTrue {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: #bef264; /* Cambia el color según tus necesidades */
+  }
+}
+
+.subrayadoFalse:hover {
+  text-decoration-color: transparent;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+  animation: subrayadoAnimacionFalse 1s;
+}
+
+@keyframes subrayadoAnimacionFalse {
+  from {
+    text-decoration-color: transparent;
+  }
+  to {
+    text-decoration-color: #dc2626; /* Cambia el color según tus necesidades */
+  }
+}
+
+.img-color {
+  filter: invert(1)
+}
