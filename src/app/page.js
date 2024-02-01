@@ -43,6 +43,9 @@ export default function Home() {
             >
               github
             </a>
+            {" "} when you make a PR to the repository, follow make a change in the repository of
+            this page in the array <span className="text-rose-500">src/app/utils/utils.js</span>
+            and put the strategy you make the example in 'Example': True.
           </p>
         </section>
 
